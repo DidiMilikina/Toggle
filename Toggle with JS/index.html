@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <title>Toggle with JS</title>
+</head>
+
+<body>
+    <label class="switch">
+        <input id="on" type="checkbox">
+        <div class="slider"></div>
+    </label>
+    <label class="slider-text">Label</label>
+    <p id="info"></p>
+</body>
+<script>
+    $(document).ready(function () {
+        $('#on').on('change', function () {
+            if (this.checked) {
+                $("#info").text("You checked me!");
+            }
+            else {
+                $("#info").text("You unchecked me!");
+            }
+        });
+    });
+</script>
+
+</html>
